@@ -43,4 +43,15 @@ public class ConfigTests {
         assertEquals(typesafeBrowser, ownerBrowser);
         assertEquals(typesafeVersion, ownerVersion);
     }
+
+    @Test
+    void configShouldHasHost() {
+        final String typesafeHost = apiConf.getValue("api.site.host");
+        final String ownerHost = ConfigHelper.host();
+
+        System.out.println("TYPESAFE HOST: " + typesafeHost);
+        System.out.println("OWNER HOST: " + ownerHost);
+
+        assertEquals(typesafeHost, ownerHost);
+    }
 }

@@ -12,6 +12,10 @@ public class ConfigHelper {
         return api.host() + api.version();
     }
 
+    public static String host() {
+        return api.host();
+    }
+
     public static String browserName() {
         return web.browserName();
     }
